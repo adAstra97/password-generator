@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="icon" type="image/png" href="./favicon/icon.png">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+      
+      <link rel="stylesheet" href="./css/style.css">
+      <title>Password Generator</title>
+   </head>
+   <body>
+      <div class="app">
+         <h1 class="app__title">Password Generator</h1>
+         <div class="app__field">
+            <div class="app__pass">
+               <input id="pass" type="text" placeholder="Generated password" disabled/>
+               <button class="app__btn-copy" type="button" id="copy">Copy</button>
+            </div>
+            <span class="app__pass-status hidden">Сopied successfully
+            </span>
+         </div>
+         <div class="app__settings">
+            <div class="setting">
+               <label for="length">Password length:</label>
+               <input type="number" id="length" min="4" max="20" value="12" />
+               <span class="length-remark hidden">Length from 4 to 20 characters!</span>
+            </div>
+            <div class="setting">
+               <input type="checkbox" id="uppercase" checked />
+               <label for="uppercase">Include uppercase letters</label>
+            </div>
+            <div class="setting">
+               <input type="checkbox" id="lowercase" checked />
+               <label for="lowercase">Include lowercase letters</label>
+            </div>
+            <div class="setting">
+               <input type="checkbox" id="numbers" checked />
+               <label for="numbers">Include numbers</label>
+            </div>
+            <div class="setting">
+               <input type="checkbox" id="symbols" checked />
+               <label for="symbols">Include symbols</label>
+            </div>
+         </div>
+         <button class="app__btn-generate" id="generate">Generate Password</button>
+      </div>
+      <script src="./js/script.js"></script>
+   </body>
+</html>
